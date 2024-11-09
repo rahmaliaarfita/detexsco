@@ -1,0 +1,76 @@
+/* Navigation Bar Styles */
+body {
+    margin: 0; /* Remove default margin */
+}
+
+.navbar {
+    background-color: #a312eb; /* Navbar background color */
+    padding: 10px 20px; /* Padding for the navbar */
+}
+
+.container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    color: white; /* Logo text color */
+    font-size: 24px; /* Logo font size */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display links in a row */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Space between links */
+}
+
+.nav-links a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for links */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.nav-links a:hover {
+    color: #f8f9fa; /* Change color on hover */
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+    flex-direction: column; /* Stack the bars vertically */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.bar {
+    height: 3px; /* Height of the bars */
+    width: 25px; /* Width of the bars */
+    background-color: white; /* Color of the bars */
+    margin: 3px 0; /* Space between bars */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        background-color: #3f5771; /* Background color for dropdown */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Position below the navbar */
+        left: 0; /* Align to the left */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the menu toggle on mobile */
+    }
+}
